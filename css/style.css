@@ -50,7 +50,7 @@ img {
 .cada-link {
     font-size: 18px;
     width: 150px;
-    margin: 20px;
+    margin: 30px;
     align-content: center;
     align-items: center;
 }
@@ -297,7 +297,7 @@ footer {
 
 @media (max-width: 500px) {
     .imagen-principal {
-        width: 480px;
+        width: 460px;
     }
 }
 
