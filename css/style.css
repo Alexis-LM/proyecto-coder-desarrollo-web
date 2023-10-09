@@ -47,10 +47,18 @@ img {
     width: 160px;
 }
 
+.cada-link {
+    font-size: 18px;
+    width: 150px;
+    margin: 25px;
+    align-content: center;
+    align-items: center;
+}
+
 .secciones {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
     margin-left: 40px;
@@ -100,7 +108,7 @@ h1 {
     font-size: 18px;
     margin-left: 60px;
     line-height: 2rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .boton {
