@@ -50,7 +50,7 @@ img {
 .cada-link {
     font-size: 18px;
     width: 150px;
-    margin: 25px;
+    margin: 10px;
     align-content: center;
     align-items: center;
 }
@@ -242,7 +242,7 @@ h3 {
 footer {
     background-color: #DBE5E0;
     margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .seccion-footer {
@@ -267,12 +267,24 @@ footer {
     margin-bottom: 20px;
 }
 
+.derechos-reservados {
+    font-family: 'roboto-general';
+    text-align: center;
+}
+
 
 
 .link {
     text-decoration: none;
     margin-right: 48px;
     color: black;
+}
+
+@media (max-width: 500px) {
+    .imagen-logo {
+        width: 180px;
+        margin-top: 15px;
+    }
 }
 
 @media (max-width: 500px) {
