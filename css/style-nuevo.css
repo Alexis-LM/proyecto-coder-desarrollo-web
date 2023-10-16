@@ -18,10 +18,10 @@ body {
 header {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   min-height: 80px;
   background-color: #DBE5E0;
-  justify-content: space-between;
-  align-items: center;
 }
 header .imagen-logo {
   display: flex;
@@ -35,8 +35,8 @@ header .imagen-logo {
 header .secciones {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   list-style: none;
   margin-left: 40px;
   font-family: roboto-general;
@@ -57,14 +57,14 @@ img {
   width: 160px;
 }
 
-.texto-bienvenida {
+.seccion-1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 80px;
   justify-content: space-between;
   align-content: center;
 }
-.texto-bienvenida .seccion-hero1 {
+.seccion-1 .seccion-1-hero {
   font-family: "roboto-general";
   padding-right: 150px;
   font-size: 18px;
@@ -72,7 +72,7 @@ img {
   line-height: 2rem;
   text-align: left;
 }
-.texto-bienvenida h1 {
+.seccion-1 h1 {
   color: brown;
   font-family: "roboto-general";
   font-size: 56px;
@@ -80,11 +80,11 @@ img {
   line-height: 3rem;
   letter-spacing: -0.25px;
 }
-.texto-bienvenida .texto-introductorio {
+.seccion-1 .seccion-1-hero-texto {
   margin-top: 30px;
   color: black;
 }
-.texto-bienvenida .boton {
+.seccion-1 .boton {
   background-color: rgb(132, 183, 132);
   color: white;
   border: none;
@@ -94,7 +94,7 @@ img {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 50px;
 }
-.texto-bienvenida .imagen-principal {
+.seccion-1 .imagen-principal {
   width: 500px;
   margin-top: 50px;
   align-content: center;
@@ -106,8 +106,8 @@ img {
   font-family: "roboto-general";
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 20px;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 .contenedor .servicio {
   display: grid;
@@ -130,7 +130,7 @@ img {
   margin-right: 50px;
   justify-content: space-between;
 }
-.contenedor .texto-busca {
+.contenedor .texto-busca, .contenedor .texto-compra, .contenedor .texto-conecta {
   font-size: 18px;
   color: black;
 }
@@ -142,8 +142,6 @@ img {
 }
 .contenedor .texto-conecta {
   display: flex;
-  font-size: 18px;
-  color: black;
 }
 .contenedor .compra {
   width: 300px;
@@ -153,8 +151,6 @@ img {
 }
 .contenedor .texto-compra {
   display: flex;
-  font-size: 18px;
-  color: black;
 }
 
 h2 {
@@ -181,7 +177,7 @@ h2 {
   margin-top: 20px;
   margin-bottom: 50px;
 }
-.productos .card {
+.productos .solo-cards .card {
   flex-wrap: wrap;
   margin-top: 20px;
 }

@@ -1,5 +1,6 @@
 @import "./utilities/variables";
-
+@import "./utilities/mixins";
+@import "./utilities/maps";
 /* Fuentes */
 
 @font-face {
@@ -23,28 +24,21 @@ body {
 // Anidaciones y Variables
 
 header {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-particular(flex, wrap, center, space-between);
     min-height: 80px;
     background-color: $color-principal;
-    justify-content: space-between;
-    align-items: center;
+
 
     .imagen-logo {
-        display: flex;
-        flex-wrap: wrap;
-        width: 120px;
-        height: auto;
+        @include flex-particular(flex, wrap, null, null);
+        @include sizes(120px, auto);
         margin-bottom: 10px;
         /* margin-top: 10px; */
         margin-left: 30px;
     }
 
     .secciones {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-particular(flex, wrap, center, space-between);
         list-style: none;
         margin-left: 40px;
         font-family: roboto-general; 
@@ -71,22 +65,22 @@ img {
 }
 
 
-.texto-bienvenida {
+.seccion-1 {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     margin-bottom: 80px;
     justify-content: space-between;
     align-content: center;
 
-    .seccion-hero1 {
+    .seccion-1-hero {
         font-family: 'roboto-general';
         padding-right: 150px;
         font-size: $general;
         margin-left: 60px;
         line-height: 2rem;
-        text-align: left;
-    }   
-    
+        text-align: left;   
+    }
+
     
     h1 {
         color: $text-title;
@@ -97,17 +91,16 @@ img {
         letter-spacing: -0.25px;
     }
 
-    .texto-introductorio {
+    .seccion-1-hero-texto {
         margin-top: 30px;
         color: $text-color;
     }
 
     .boton {
-        background-color: rgb(132, 183, 132);
+        background-color: map-get($map-colors, verde-boton);
         color: white;
         border: none;
-        width: 150px;
-        height: 50px;
+        @include sizes(150px, 50px);
         letter-spacing: 0.1rem;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
         border-radius: 50px;
@@ -118,6 +111,7 @@ img {
         margin-top: 50px;
         align-content: center;
     }
+
 }
 
 
@@ -128,11 +122,7 @@ img {
 .contenedor {
     background-color: $color-principal;
     font-family: 'roboto-general';
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-
+    @include padding(50px, 50px, 20px, 20px);
 
     .servicio {
         display: grid;
@@ -173,8 +163,7 @@ img {
         
         .texto-conecta {
             display: flex;
-            font-size: $general;
-            color: $text-color;
+            @extend .texto-busca
         }
         
         .compra { 
@@ -186,8 +175,7 @@ img {
         
         .texto-compra {
             display: flex;
-            font-size: $general;
-            color: $text-color;
+            @extend .texto-busca
         }
 }
 
@@ -217,12 +205,12 @@ h2 {
         place-items: center;
         margin-top: 20px;
         margin-bottom: 50px;
+        
+        .card {
+        flex-wrap: wrap;
+        margin-top: 20px;
         }
-    
-            .card {
-            flex-wrap: wrap;
-            margin-top: 20px;
-            }
+    }
 }
 
 
@@ -234,7 +222,7 @@ footer {
     background-color: $color-principal;
     margin-top: 20px;
     /* margin-bottom: 20px; */
-    
+
 
     .seccion-footer {
         margin-left: 50px;

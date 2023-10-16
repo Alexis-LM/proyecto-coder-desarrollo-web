@@ -1,0 +1,23 @@
+@mixin flex-general {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-particular($display, $flex-wrap, $align, $justify) {
+    display: $display;
+    flex-wrap: $flex-wrap;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin padding($left, $right, $top, $bottom) {
+    padding-left: $left;
+    padding-right: $right;
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
