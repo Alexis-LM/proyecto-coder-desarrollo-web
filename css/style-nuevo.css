@@ -22,6 +22,14 @@ header {
   justify-content: space-between;
   min-height: 80px;
   background-color: #DBE5E0;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-name: entrada;
+}
+@keyframes entrada {
+  from {
+    opacity: 0%;
+  }
 }
 header .imagen-logo {
   display: flex;
@@ -102,7 +110,7 @@ img {
 
 /* Sección consumidores y productores */
 .contenedor {
-  background-color: #DBE5E0;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
   font-family: "roboto-general";
   padding-left: 50px;
   padding-right: 50px;
@@ -218,7 +226,7 @@ footer .derechos-reservados {
   }
 }
 @media (max-width: 500px) {
-  .texto-bienvenida {
+  .seccion-1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     flex-wrap: wrap;
@@ -230,14 +238,14 @@ footer .derechos-reservados {
   }
 }
 @media (max-width: 500px) {
-  .servicio {
+  .contenedor .servicio {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     flex-wrap: wrap;
   }
 }
 @media (max-width: 500px) {
-  .solo-cards {
+  .productos .solo-cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     flex-wrap: wrap;

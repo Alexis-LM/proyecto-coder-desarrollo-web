@@ -19,6 +19,7 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
 }
 
 // Anidaciones y Variables
@@ -27,7 +28,15 @@ header {
     @include flex-particular(flex, wrap, center, space-between);
     min-height: 80px;
     background-color: $color-principal;
-
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-name: entrada;  
+    
+    @keyframes entrada {
+    from {
+    opacity: 0%;
+    }
+    } 
 
     .imagen-logo {
         @include flex-particular(flex, wrap, null, null);
@@ -35,6 +44,7 @@ header {
         margin-bottom: 10px;
         /* margin-top: 10px; */
         margin-left: 30px;
+        
     }
 
     .secciones {
@@ -71,6 +81,7 @@ img {
     margin-bottom: 80px;
     justify-content: space-between;
     align-content: center;
+   
 
     .seccion-1-hero {
         font-family: 'roboto-general';
@@ -78,7 +89,8 @@ img {
         font-size: $general;
         margin-left: 60px;
         line-height: 2rem;
-        text-align: left;   
+        text-align: left;  
+        
     }
 
     
@@ -89,6 +101,7 @@ img {
         padding-top: 50px;
         line-height: 3rem;
         letter-spacing: -0.25px;
+        
     }
 
     .seccion-1-hero-texto {
@@ -120,7 +133,7 @@ img {
 /* Sección consumidores y productores */
 
 .contenedor {
-    background-color: $color-principal;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
     font-family: 'roboto-general';
     @include padding(50px, 50px, 20px, 20px);
 
@@ -209,6 +222,7 @@ h2 {
         .card {
         flex-wrap: wrap;
         margin-top: 20px;
+            
         }
     }
 }
@@ -261,10 +275,10 @@ footer {
 }
 
 @media (max-width: 500px) {
-    .texto-bienvenida {
+    .seccion-1 {
         display: grid;
         grid-template-columns: repeat(1,1fr);
-        flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 }
 
@@ -275,7 +289,7 @@ footer {
 }
 
 @media (max-width: 500px) {
-    .servicio {
+    .contenedor .servicio {
         display: grid;
         grid-template-columns: repeat(1,1fr);
         flex-wrap: wrap;
@@ -283,7 +297,7 @@ footer {
 }
 
 @media (max-width: 500px){
-    .solo-cards {
+    .productos .solo-cards {
     display: grid;
     grid-template-columns: repeat(1,1fr);
     flex-wrap: wrap;
